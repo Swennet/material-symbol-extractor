@@ -1,0 +1,49 @@
+{
+  "name": "material-symbol-extractor",
+  "version": "1.0.0",
+  "description": "Build a self-hosted Material Symbols font subset from icons used in source files.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": "./src/index.js",
+  "bin": {
+    "material-symbol-extractor": "src/cli.js"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint:package": "publint --strict --pack=false",
+    "check": "npm run lint && npm run format:check && npm run test:coverage && npm run lint:package",
+    "prepack": "npm run check"
+  },
+  "keywords": [
+    "material-symbols",
+    "google-fonts",
+    "font-subset",
+    "icons"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@vitest/coverage-v8": "^4.1.10",
+    "eslint": "^10.8.1",
+    "globals": "^17.9.0",
+    "prettier": "^3.9.6",
+    "publint": "^0.3.23",
+    "vitest": "^4.1.10"
+  }
+}
