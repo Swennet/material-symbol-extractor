@@ -45,5 +45,13 @@
     "prettier": "^3.9.6",
     "publint": "^0.3.23",
     "vitest": "^4.1.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Swennet/material-symbol-extractor.git"
+  },
+  "homepage": "https://github.com/Swennet/material-symbol-extractor#readme",
+  "bugs": {
+    "url": "https://github.com/Swennet/material-symbol-extractor/issues"
   }
 }
