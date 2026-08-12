@@ -1,6 +1,6 @@
 {
   "name": "material-symbol-extractor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Build a self-hosted Material Symbols font subset from icons used in source files.",
   "type": "module",
   "engines": {
