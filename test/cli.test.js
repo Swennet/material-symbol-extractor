@@ -146,10 +146,10 @@ describe("CLI subprocess", () => {
       "config/custom.json",
     ],
   ])(
-    "runs through the shebang entrypoint with %s",
+    "runs through the dedicated bin entrypoint with %s",
     async (_name, configPath, argument) => {
       const { directory, preloadPath } = await subprocessFixture(configPath);
-      const cliPath = path.resolve("src/cli.js");
+      const cliPath = path.resolve("src/bin.js");
       const result = spawnSync(
         process.execPath,
         argument === undefined ? [cliPath] : [cliPath, argument],

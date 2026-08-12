@@ -1,6 +1,3 @@
-#!/usr/bin/env node
-import path from "node:path";
-import { pathToFileURL } from "node:url";
 import { syncMaterialSymbols } from "./index.js";
 
 export async function runCli(args = process.argv.slice(2), env = process.env) {
@@ -32,10 +29,3 @@ export async function runCli(args = process.argv.slice(2), env = process.env) {
     return 1;
   }
 }
-
-const isDirectInvocation =
-  typeof process.argv[1] === "string" &&
-  import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href;
-
-/* v8 ignore next -- exercised by the real subprocess test */
-if (isDirectInvocation) process.exitCode = await runCli();
